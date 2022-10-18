@@ -42,6 +42,9 @@ public class Ejercicio2 {
 			case 20: System.out.println("Su letra es C"); break;
 			case 21: System.out.println("Su letra es K"); break;
 			case 22: System.out.println("Su letra es E"); break;
+			
+			default:
+				System.out.println("Error: No se encuentra letra asociada");
 			}
 		}
 		
