@@ -1,11 +1,13 @@
 package ejercicios;
 
 import java.util.Scanner;
-
+/*
+ * Pruebas (valor/es introducidos) : (respuestas)
+ */
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
-		int numero, decimal1, decimal2, decimal3, decimal4;
+		int numero, unidad, decena, centena, millar;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -39,11 +41,11 @@ public class Ejercicio1 {
 		}
 		
 		else{
-			decimal1 = numero/1000;
-			decimal3 = (numero/10)%10;
-			decimal2 = decimal3%10;
-			decimal4 = numero%10;
-			if(numero/100==numero%100||(decimal1==decimal4&&decimal2==decimal3)) {
+			unidad = numero/1000;
+			centena = (numero/10)%10;
+			decena = centena%10;
+			millar = numero%10;
+			if(numero/100==numero%100||(unidad==millar&&decena==centena)) {
 				System.out.println("Su número es capicúa");
 			}
 			else {

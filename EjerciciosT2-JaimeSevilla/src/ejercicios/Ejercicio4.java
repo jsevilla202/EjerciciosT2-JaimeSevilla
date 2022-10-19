@@ -18,9 +18,9 @@ public class Ejercicio4 {
 		if(0>numero||numero>99) {
 			System.out.println("Error: Ha introducido un número fuera de rango");
 		}
-		else if(numero%10!=0&&(numero>=1&&numero<=9)||numero>=16) {
+		else if(numero%10!=0&&((numero>=1&&numero<=9)||numero>=16)) {
 		switch(decena) {
-		case 1 -> System.out.println("Dieci");
+		case 1 -> System.out.print("Dieci");
 		case 2 -> System.out.print("Venti");
 		case 3 -> System.out.print("Trenta y ");
 		case 4 -> System.out.print("Cuarenta y ");
