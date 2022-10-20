@@ -1,17 +1,33 @@
 package ejercicios;
 
 import java.util.Scanner;
-
+/*
+ * Pruebas (valor/es introducidos) : (respuestas)
+ * 12 - Doce
+ * 20 - veinte
+ * 30 - Treinta
+ * 22 - VentiDos
+ * 0 - Cero
+ * 35 - Treinta y Cinco
+ * 16 - DieciSeis
+ * 100 - Error: Ha introducido un número fuera de rango
+ * -1 - Error: Ha introducido un número fuera de rango
+ */
 public class Ejercicio4 {
 
 	public static void main(String[] args) {
+		//Nombramos a las variables "numero", "unidad" ( unidad del número ) y "decena" ( decena del número ) como números enteros
 		int numero, unidad, decena;
 		
+		//Creamos el scanner y lo nombramos "sc"
 		Scanner sc = new Scanner(System.in);
 		
+		//Pedimos al usuario un número entre el 0 y el 99 para mostrarlo por consola en letras
 		System.out.print("Inserte un número entre 0 y 99 en digitos para pasarl a letras: ");
+		//Capturamos lo que ha introducido el usuario y lo guardamos en la variable "numero"
 		numero = sc.nextInt();
 		
+		//Definimos las variables "unidad" y "decena"
 		unidad = numero%10;
 		decena = numero/10;
 		
