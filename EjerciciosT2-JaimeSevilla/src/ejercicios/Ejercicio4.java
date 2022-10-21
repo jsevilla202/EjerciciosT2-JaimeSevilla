@@ -31,10 +31,19 @@ public class Ejercicio4 {
 		unidad = numero%10;
 		decena = numero/10;
 		
+		//Comprobamos que el número esté dentro de los parametros establecidos anteriormente
 		if(0>numero||numero>99) {
+			//Si no lo está, se lo notificamos al usuario por un mensaje por consola
 			System.out.println("Error: Ha introducido un número fuera de rango");
 		}
+		/*
+		 * En otro caso realizamos las siguientes comprobaciones:
+		 * - El número no es multiplo de 10
+		 * - El número está entre 1 y 9
+		 * - El número está entre 16 y 99
+		 */
 		else if(numero%10!=0&&((numero>=1&&numero<=9)||numero>=16)) {
+		//Si se cumple lo anterior mencionado, un switch comprueba la decena del número y muestra un valor u otro dependiendo del valor
 		switch(decena) {
 		case 1 -> System.out.print("Dieci");
 		case 2 -> System.out.print("Venti");
@@ -46,6 +55,7 @@ public class Ejercicio4 {
 		case 8 -> System.out.print("Ochenta y ");
 		case 9 -> System.out.print("Noventa y ");
 		}
+		//Realiza la misma función que el anterior pero con la unidad
 		switch(unidad) {
 		case 1 -> System.out.print("Uno");
 		case 2 -> System.out.print("Dos");
@@ -57,9 +67,15 @@ public class Ejercicio4 {
 		case 8 -> System.out.print("Ocho");
 		case 9 -> System.out.print("Nueve");
 		}
+		//Ambos switch imprimen un mensaje en la misma linea creando el número introducido
 		}
 		
 		else {
+			/*
+			 * Por otro lado, si el número no cumple lo anterior nos encontramos con números "irreutilizables" en el programa
+			 * Dependiendo del valor de la variable "número", se mostrará un resultado u otro por consola
+			 */
+			
 			switch(numero) {
 			case 0 -> System.out.println("Cero");
 			case 10 -> System.out.println("Diez");
@@ -78,7 +94,7 @@ public class Ejercicio4 {
 			case 90 -> System.out.println("Noventa");
 			}
 		}
-
+		//Cerramos el scanner
 		sc.close();
 	}
 }
