@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 23-59-59 : Serían las 0:0:0 si le añadimos 1 segundo
  * 0-59-58 : Serían las 0:59:59 si le añadimos 1 segundo
  * 0-61-0 : ERROR: La hora, minutos o segundos introducido es erronea
- * 
+ * 24-60-60 : Serían las 1:1:1 si le añadimos 1 segundo
  */
 class Ejercicio7 {
 
@@ -45,16 +45,22 @@ class Ejercicio7 {
 			System.out.println("ERROR: La hora, minutos o segundos introducido es erronea");
 		}
 		else {
-			if (hora==24||minuto==60||segundo==60) {
-				if(hora==24) {
-					hora = 0;
-				}
-				if(minuto==60) {
-					minuto = 0;
-				}
-				if(segundo==60) {
-					segundo = 0;
-				}
+			//Comprobamos si la hora es 24 o si los minutos o segundos son 60
+			if(hora==24||minuto==60||segundo==60) {
+			//Si la hora es 24, pasa a ser 0, al ser el día siguiente
+			if(hora==24) {
+				hora = 0;
+			}
+			//Si los minutos son 60, se vuelven 0 y se le suma 1 hora al tiempo
+			if(minuto==60) {
+				minuto = 0;
+				hora = hora + 1;
+			}
+			//Si los segundos son 60, se vuelven 0 y se le suma 1 minuto al tiempo
+			if(segundo==60) {
+				segundo = 0;
+				minuto = minuto + 1;
+			}
 			}
 			//Si los segundos son 59
 			if(segundo==59) {
@@ -69,13 +75,15 @@ class Ejercicio7 {
 					 */
 					minuto = 0;
 					hora = hora+1;
-					if(hora==24);
-						//Si la hora es 24 después de la suma anterior, pasa a ser 0, al ser el día siguiente
+					//Si la hora es 24 después de la suma anterior, pasa a ser 0, al ser el día siguiente
+					if(hora==24) {
 						hora = 0;
-						//Mostramos la hora final que nos ha dado al sumar 1 segundo
-						System.out.println("Serían las "+hora+":"+minuto+":"+segundo+" si le añadimos 1 segundo");
+					}
+					//Mostramos la hora final que nos ha dado al sumar 1 segundo
+					System.out.println("Serían las "+hora+":"+minuto+":"+segundo+" si le añadimos 1 segundo");
 				}
 			}
+			
 			else {
 				//Si lo anterior no se cumple mostramos la hora final que nos ha dado al sumar 1 segundo
 				System.out.println("Serían las "+hora+":"+minuto+":"+(segundo+1)+" si le añadimos 1 segundo");

@@ -10,9 +10,9 @@ public class Ejercicio6 {
 
 	public static void main(String[] args) {
 		/*
-		 * Nombramos a las variables "numero1", "numero2" ( numero1 y numero2 son los números generados aleatoriamente ), 
-		 * "respuesta" ( la suma de numero1 y numero2 ) y respuestausuario ( respuesta que da el suaurio a la suma )
-		 * como números enteros
+		 * Nombramos a las variables "numero1", "numero2" ( numero1 y numero2 son los números 
+		 * generados aleatoriamente ), "respuesta" ( la suma de numero1 y numero2 ) 
+		 * y respuestausuario ( respuesta que da el suaurio a la suma ) como números enteros
 		 */
 		int numero1, numero2, respuesta, respuestausuario;
 		
@@ -22,8 +22,11 @@ public class Ejercicio6 {
 		/*
 		 * Generamos los número aleatorios y los metemos cada uno dentro de una variable diferente
 		 * 
-		 * Math.random() genera un número aleatorio entre 0 y 1, por lo que para que esté dentro del rango que queremos ( 1-99 )
-		 * lo tendremos que multiplicar por 100, si queremos incluir más números, lo multiplicaremos por 1000 y así respectivamente
+		 * Math.random() genera un número aleatorio entre 0 y 1, 
+		 * por lo que para que esté dentro del rango que queremos ( 1-99 )
+		 * 
+		 * lo tendremos que multiplicar por 100, si queremos incluir más números, lo multiplicaremos por 1000 
+		 * y así respectivamente
 		 * 
 		 * Truncamos el número con (int) para convertirlo en entero y que no tenga decimales
 		 */
