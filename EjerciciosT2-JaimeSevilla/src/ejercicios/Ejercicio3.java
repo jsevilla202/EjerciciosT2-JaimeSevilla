@@ -32,6 +32,10 @@ public class Ejercicio3 {
 		//Capturamos lo que ha introducido el usuario y lo guardamos en la variable "kilos"
 		kilos = sc.nextDouble();
 		
+		//Comprobamos si el usuario ha introducido un valor negativo
+		if(animales<0||kilos<0||comida<0) {
+			System.out.println("ERROR: No se admiten valores negativos");
+		}
 		//Si el número total de animales es 0, no tiene sentido continua con el programa ya que no hay animales que alimentar
 		if(animales==0) {
 			//Si es así, se mostrará por consola que no hay animales que alimentar
